@@ -8,17 +8,20 @@ for (let i = 0; i < accordionBtn.length; i++) {
         const plusIcon = this.querySelector(".plus-icon")
         const minusIcon = this.querySelector(".minus-icon")
         const colorch = this.querySelector(".accordio-description");
+        
 
         if(itemDescription.style.maxHeight){
             itemDescription.style.maxHeight = null;
             plusIcon.style.display = "block";
             minusIcon.style.display = "none";
-            this.querySelector(".accordion-btn p").style.color = "black"
+            this.querySelector(".accordion-btn p").style.color = "black";
+            
         }else{
             itemDescription.style.maxHeight = itemDescription.scrollHeight + "px";
             plusIcon.style.display = "none";
-            minusIcon.style.display = "block"
-            this.querySelector(".accordion-btn p").style.color = "hsl(292, 42%, 14%)"
+            minusIcon.style.display = "block";
+            this.querySelector(".accordion-btn p").style.color = "none";
+            
         }
     })
 }
